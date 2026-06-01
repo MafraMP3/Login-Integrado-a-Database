@@ -1,12 +1,15 @@
 <?php	
- 
+ // chama a inicialização da sessão
  include("../infra/db/connect.php");
 
+
+ // verificada se o usuario está setado, se não, envia para a tela index.
  if(!isset($_SESSION["usuario"])){
     header("Location: ../index.php");
     exit();
  }
 
+ // verifica se o metodo de request é post, se sim muda define as variaveis usuario e senha para 
  if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
   $_usuario = $_POST ["usuario"];

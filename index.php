@@ -1,6 +1,8 @@
 
 <?php
+ // chama a inicialização da sessão
 include("infra/db/connect.php");
+
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
