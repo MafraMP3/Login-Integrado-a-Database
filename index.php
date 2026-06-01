@@ -4,11 +4,14 @@
 include("infra/db/connect.php");
 
 
+//verifica se o metodo de request é post, se sim, adciona oque o usuario digitou nas areas senha e usuario como novas informações
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     $usuario = $_POST["usuario"];
     $senha = $_POST["senha"];
 
+
+    // mostra da tabela usuario, a o usuario e a senha que foram adicionados nas variaveis
     $sql = "SELECT * FROM usuario 
     WHERE usuario = '$usuario' 
     AND senha = '$senha'";
