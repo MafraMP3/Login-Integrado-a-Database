@@ -9,13 +9,16 @@
     exit();
  }
 
- // verifica se o metodo de request é post, se sim muda define as variaveis usuario e senha para 
+ // verifica se o metodo de request é post, se sim  define as variaveis usuario e senha para oque foi digitado pelo usuario.
  if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
   $_usuario = $_POST ["usuario"];
   $_senha = $_POST ["senha"];
 
+  // instrução SQL INSERT INTO para as informações inseridas pelo usuario irem para o banco.
   $sql = "INSERT INTO usuario (usuario, senha) VALUES ('$usuario', $senha) ";
+  
+  // verifica se a instrução acima foi executada
   if($conn -> query($sql) == TRUE){
      echo "<script>alert('Usuário Cadastrado com sucesso!')</script>";
         }else{
@@ -31,11 +34,11 @@
     <title>Home</title>
 </head>
 <body>
-
+   <!-- Insere o nome do usuario logado na sessão -->
  <H2> Bem vindo, <?php echo $_SESSION["usuario"];?>.</H2>
 
     <h2>Cadastrar usuario</h2>
-
+   <!-- formulario POST para cadastrar novos usuarios. -->
     <form method="POST">
 
     <label for="usuario">Usuario</label>
