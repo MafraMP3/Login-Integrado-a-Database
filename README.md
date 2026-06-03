@@ -9,10 +9,10 @@ Login integrado a Database
 desenvolver um software em PHP e MySQL que, integrado um banco de dados, permita todas as ações de um CRUD em uma tabela de usuários. 
 ## Tecnologias Utilizadas
 
-* PHP
-* MySQL
-* HTML
-* XAMPP
+[![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net/)
+[![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/docs/Web/HTML)
+[![XAMPP](https://img.shields.io/badge/XAMPP-FB7A24?style=for-the-badge&logo=xampp&logoColor=white)](https://www.apachefriends.org/)
 
 ## Arquitetura dos arquivos
 
