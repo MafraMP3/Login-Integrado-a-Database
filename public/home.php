@@ -53,6 +53,11 @@
 
     </form>
 
+    <?php
+    include("../public/component/table.php"); //chama a tabela descrita na pagina table.php
+    
+    ?>
+
   <a href="logout.php">Sair</a>
 
 </body>
