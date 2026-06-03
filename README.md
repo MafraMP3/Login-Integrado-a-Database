@@ -43,3 +43,8 @@ projeto/
 * **script.sql**: contém os comandos para criação do banco e da tabela de usuários.
 * **logout.php**: Finaliza a sessão do administrador.
 * **table.sql**: função que cria e exibe a tabela usuario, com os dados retirados do banco de dados.
+
+## Principais aprendizagens
+* Integração de paginas html com o banco de dados.
+* Funções PHP.
+
