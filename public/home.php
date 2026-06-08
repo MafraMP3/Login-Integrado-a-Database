@@ -28,19 +28,6 @@
       }
       }
 
-      if(isset($_POST["excluir"])) {
-
-    $id = $_POST["excluirUsuario"];
-
-    $sql = "DELETE FROM usuario WHERE id = $id";
-
-    if ($conn->query($sql) === true) { //verifica se deu certo e alerta
-            header("Location: home.php");
-            exit();
-        } else {
-            echo "<script>alert('ERRO!')</script>";
-        }
-}
     }
 ?>
 
@@ -71,20 +58,6 @@
 
     </form>
 
-  <form method="POST">
-    <label for="excluirUsuario">Selecione o ID para excluir o usuário</label>
-      <select name="excluirUsuario" id="selectExcluir">
-       <?php
-         $sqlID = "SELECT id FROM usuario"; 
-            $resultadoID = $conn->query($sqlID);
-            while ($linha = $resultadoID->fetch_assoc()) { 
-            echo "<option value=" . $linha["id"] . ">" . $linha["id"] . "</option>"; 
-             }
-             ?>
-      </select>
-      <br>
-      <button type="submit" name="excluir">excluir</button> 
-   </form>
 
 
     <?php
