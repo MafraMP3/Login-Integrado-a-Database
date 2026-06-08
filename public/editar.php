@@ -8,7 +8,7 @@
 
     $id = $_GET["id"];
 
-    $sql = "SELECT * FROM users WHERE id = $id";
+    $sql = "SELECT * FROM usuario WHERE id = $id";
     $resultado = $conn -> query($sql);
 
     $usuario = $resultado -> fetch_assoc();
@@ -19,8 +19,8 @@
         $novaSenha = $_POST["senha"];
 
         $sqlUpdate = "UPDATE usuario SET 
-                        username = '$novoUsuario', 
-                        password = '$novaSenha' 
+                        usuario = '$novoUsuario', 
+                        senha = '$novaSenha' 
                         WHERE id ='$id'";
         if($conn -> query($sqlUpdate) === TRUE){
             header("Location: home.php");
@@ -56,11 +56,11 @@
 
     <form method="POST">
         <label for="usuario">Usuario:</label>
-        <input type="text" name="usuario" value=" <?php echo $usuario['username'] ?> ">
+        <input type="text" name="usuario" value=" <?php echo $usuario['usuario'] ?> ">
         <br>
         <br>
         <label for="senha">Senha:</label>
-        <input type="password" name="senha" value=" <?php echo $usuario['password'] ?> ">
+        <input type="password" name="senha" value=" <?php echo $usuario['senha'] ?> ">
         <br>
         <br>
         <button type="submit">Salvar</button>
