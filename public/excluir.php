@@ -8,7 +8,7 @@ if (!isset($_SESSION["usuario"])) {
 
 $id = $_GET["id"];
 
-$sql = "DELETE FROM users WHERE id = $id ";
+$sql = "DELETE FROM usuario WHERE id = $id ";
 
 if ($conn->query($sql) === TRUE) {
     header("Location: home.php");
